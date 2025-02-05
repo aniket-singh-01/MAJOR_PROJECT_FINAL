@@ -1,0 +1,16 @@
+training:
+  epochs: 50
+  batch_size: 32
+  learning_rate: 0.001
+  image_size: [299, 299]
+
+gwo:
+  num_wolves: 10
+  max_iter: 100
+  search_space:
+    - [0.0001, 0.01]  # learning_rate range
+    - [32, 256]       # batch_size range
+
+data:
+  path: 'data/dataset'
+  test_size: 0.2 
