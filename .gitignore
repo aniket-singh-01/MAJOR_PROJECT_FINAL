@@ -1,0 +1,53 @@
+# .gitignore for skin lesion classification project
+
+# Datasets
+ISIC_2019/
+data/
+datasets/
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.tif
+*.tiff
+!assets/*.png  # Allow images in assets folder for README
+
+# Model checkpoints and weights - with exception for best model
+checkpoints/
+*.h5
+*.weights
+*.pb
+# Keep your best model for easy deployment
+!checkpoints/20250521-013436/model_stage2_02_0.7116.weights.h5
+
+# Logs and tensorboard files
+logs/
+events.out.tfevents.*
+
+# Cache files
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.DS_Store
+
+# Virtual environment
+venv/
+env/
+.env/
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Distribution/packaging
+dist/
+build/
+*.egg-info/
+
+# Generated visualizations (except examples)
+visualizations/
+results/
+!visualizations/examples/
